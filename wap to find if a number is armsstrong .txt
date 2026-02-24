@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int num, temp, digit, sum = 0, n = 0, power;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    temp = num;
+
+    // Count the number of digits
+    while (temp != 0) {
+        temp /= 10;
+        n++;
+    }
+
+    temp = num;
+
+    // Calculate sum of digits raised to power n
+    while (temp != 0) {
+        digit = temp % 10;
+        power = 1;
+        for (int i = 0; i < n; i++)
+            power *= digit;  // multiply digit n times
+        sum += power;
+        temp /= 10;
+    }
