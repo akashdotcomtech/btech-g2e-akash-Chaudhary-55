@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int num, i;
+
+    // Prompt the user to enter a positive integer
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    printf("Factors of %d are: ", num);
+
+    // Loop from 1 up to the entered number
+    for (i = 1; i <= num; ++i) {
+        // Check if the number is exactly divisible by i
+        if (num % i == 0) {
+            // If the remainder is 0, i is a factor and is printed
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
