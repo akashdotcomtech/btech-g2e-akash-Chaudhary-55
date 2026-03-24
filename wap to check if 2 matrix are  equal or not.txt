@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int r1, c1, r2, c2, i, j, isEqual = 1;
+
+
+    printf("Enter rows and columns for first matrix: ");
+    scanf("%d %d", &r1, &c1);
+
+    
+    printf("Enter rows and columns for second matrix: ");
+    scanf("%d %d", &r2, &c2);
+
+    
+    if (r1 != r2 || c1 != c2) {
+        printf("Matrices cannot be compared (different dimensions).\n");
+        return 0;
+    }
+
+    int a[r1][c1], b[r2][c2];
+
+    // Input elements for the first matrix
+    printf("Enter elements of first matrix:\n");
+    for (i = 0; i < r1; i++) {
+        for (j = 0; j < c1; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
